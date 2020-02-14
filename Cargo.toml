@@ -1,0 +1,7 @@
+[package]
+name = "get-gitignore"
+version = "0.1.0"
+authors = ["jihchi <achi@987.tw>"]
+edition = "2018"
+
+[dependencies]
