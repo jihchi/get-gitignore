@@ -14,7 +14,7 @@ fn help(program: &str, opts: Options) -> Result<(), Box<dyn std::error::Error>> 
 	Ok(())
 }
 
-fn get(types: &Vec<String>) -> Result<(), Box<dyn std::error::Error>> {
+fn get(types: &[String]) -> Result<(), Box<dyn std::error::Error>> {
 	print!("{:?}", types);
 	Ok(())
 }
@@ -35,7 +35,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 		ls()
 	} else {
 		let types = &matches.free;
-		if types.len() > 0 {
+		if !types.is_empty() {
 			get(types)
 		} else {
 			help(&program, opts)
